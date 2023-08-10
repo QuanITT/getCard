@@ -1,0 +1,14 @@
+[
+    {
+      "id": 1,
+      "title": "Noteworthy technology acquisitions 2021",
+      "image": "https://th.bing.com/th/id/R.105feb1ff0869489e31624ff0fbd4e8c?rik=1MqbiSkQ4pBw8Q&pid=ImgRaw&r=0",
+      "content": "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+    },
+    {
+      "id": 2,
+      "title": "Another Article Title",
+      "image": "https://example.com/another-image.jpg",
+      "content": "This is another article content."
+    }
+  ]

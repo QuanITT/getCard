@@ -7,7 +7,7 @@ describe('fetchData', () => {
     const mockResponse = { ok: true, json: async () => mockData };
     global.fetch = jest.fn().mockResolvedValue(mockResponse);
 
-    const url = 'https://example.com/data.json';
+    const url = 'https://newsapi.org/v2/everything?q=tesla&from=2023-07-10&sortBy=publishedAt&apiKey=f0880f7d2363474680cd06c3c59b01d2';
     const data = await fetchData(url);
 
     expect(data).toEqual(mockData);
@@ -18,7 +18,7 @@ describe('fetchData', () => {
     const mockResponse = { ok: false };
     global.fetch = jest.fn().mockResolvedValue(mockResponse);
 
-    const url = 'https://example.com/data.json';
+    const url = 'https://newsapi.org/v2/everything?q=tesla&from=2023-07-10&sortBy=publishedAt&apiKey=f0880f7d2363474680cd06c3c59b01d2';
     await expect(fetchData(url)).rejects.toThrow('Network response was not ok');
   });
 
@@ -26,7 +26,7 @@ describe('fetchData', () => {
     const mockResponse = { ok: true, json: async () => { throw new Error('Test Error'); } };
     global.fetch = jest.fn().mockResolvedValue(mockResponse);
 
-    const url = 'https://example.com/data.json';
+    const url = 'https://newsapi.org/v2/everything?q=tesla&from=2023-07-10&sortBy=publishedAt&apiKey=f0880f7d2363474680cd06c3c59b01d2';
     await expect(fetchData(url)).rejects.toThrow('Error fetching data: Test Error');
   });
 
